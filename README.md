@@ -2,6 +2,9 @@
 Meia Richelle T. Go, Yesha P. Llorando
 
 ### Execution time:
+10x10: 0.000ms<br>
+100x100: 0.0044ms<br>
+1000x1000: 0.4746ms<br>
 
 ### Short analysis:
 
