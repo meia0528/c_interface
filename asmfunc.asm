@@ -1,9 +1,9 @@
+; Meia Richelle Go, Yesha Llorando
 ; assembly part
 
 section .data
 mult dq 255.0
 rounding dq 0.5
-
 section .text
 bits 64
 default rel 
@@ -25,8 +25,16 @@ L1:
 	addsd xmm0, [rounding]
 
 	cvttsd2si rax, xmm0
-	mov [r8], al
+	cmp rax, 255
+	jg float_val_exceeds_1
 
+	mov [r8], al
+	jmp increment_values
+
+float_val_exceeds_1:
+	mov byte[r8], 255
+
+increment_values:
 	; move to the next val
 	add rdx, 8
 	inc r8
