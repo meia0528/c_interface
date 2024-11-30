@@ -1,8 +1,10 @@
+// Meia Richelle Go, Yesha Llorando
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
 
-// order of registers: rcx, rdx, r8, r9
+// order of registers: rcx, rdx, r8
 // return register: rax
 
 extern int imgCvtGrayFloatToInt(int size, double* float_pixel_vals, unsigned char* int_pixel_vals);
